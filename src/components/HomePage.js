@@ -6,7 +6,6 @@ import carousel_1 from '../data/img/carousel1.jpg'
 import carousel_2 from '../data/img/carousel2.jpg'
 import carousel_3 from '../data/img/carousel3.jpg'
 import carousel_4 from '../data/img/carousel4.jpg'
-import { theme } from '../theme/MyTheme';
 import { Link } from 'react-router-dom';
 
 export default function HomePage() {
@@ -34,7 +33,7 @@ export default function HomePage() {
 
     const [hover, setHover] = useState(false);
 
-
+   
 
 
     return (
