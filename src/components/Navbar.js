@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 
 import { Link } from 'react-router-dom';
 import { theme } from '../theme/MyTheme';
+import '../css/Homepage.css'
 
 
 
@@ -35,9 +36,9 @@ export default function Navbar() {
         <Box sx={{ flexGrow: 1 }}>
             <AppBar position="static">
                 <Toolbar>
-                    <Box sx={{ flexGrow: 1, display: 'inline-flex' }}>
+                    <Box sx={{ flexGrow: 1, display: 'inline-flex', py: '20px' }}>
                         <Typography variant="h5" component="div" sx={{}}>
-                            CozyLiving
+                            <img className='logoHeader' alt='' src='https://cozyliving.com.vn/cdn/shop/files/LOGO_COZY_1_569x330_afe5176a-c793-41c3-9075-afb99c972370.svg?v=1685772380&width=120'></img>
                         </Typography>
 
                         <Button sx={{ marginLeft: 8 }} color="inherit"><Link style={{ textDecoration: "none", color: theme.palette.text.primary }} to="/">Home</Link></Button>
@@ -80,8 +81,7 @@ export default function Navbar() {
                             <MenuItem onClick={handleClose}>Dining Room</MenuItem>
                             <MenuItem onClick={handleClose}>Bedroom</MenuItem>
                         </Menu>
-                        <Button sx={{ marginLeft: 4 }} color="inherit"><Link style={{ textDecoration: "none", color: theme.palette.text.primary }} to="/">About Us</Link></Button>
-                        <Button sx={{ marginLeft: 4 }} color="inherit"><Link style={{ textDecoration: "none", color: theme.palette.text.primary }} to="/">Contact</Link></Button>
+                        <Button sx={{ marginLeft: 4 }} color="inherit"><Link style={{ textDecoration: "none", color: theme.palette.text.primary }} to="/About">About Us</Link></Button>
 
                     </Box>
                     <Button color="inherit">Login</Button>

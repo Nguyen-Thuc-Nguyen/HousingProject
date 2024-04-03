@@ -9,6 +9,9 @@ export const theme = createTheme({
         primary: {
             main: "#DDDDDD"
         },
+        secondary: {
+            main: "#121212"
+        },
     },
     components: {
         MuiTypography: {
@@ -33,6 +36,17 @@ export const theme = createTheme({
         '&.active': {
             backgroundColor: 'blue',
         },
+    },
+    typography: {
+        primary: {
+            fontSize: 14,
+
+        },
+        footerItem: {
+            color: ' #121212',
+
+            fontSize: '0.8rem',
+        }
     },
 })
 
