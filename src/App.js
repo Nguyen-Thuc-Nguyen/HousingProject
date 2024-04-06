@@ -5,6 +5,7 @@ import HomePage from './components/HomePage';
 import Footer from './components/Footer';
 import { theme } from './theme/MyTheme'
 import Navbar from './components/Navbar';
+import Login from './components/Login';
 import { Route, Routes } from 'react-router-dom';
 
 
