@@ -8,13 +8,14 @@ import person from '../assets/person.png'
 const Login = () => {
     const [action, setAction] = useState("Sign Up");
     return (
+
         <div className='container'>
             <div className='header'>
                 <div className='text'>{action}</div>
                 <div className='underLine'></div>
             </div>
             <div className='form'>
-                {action === 'Login'? <div></div> : <div className='input'>
+                {action === 'Login' ? <div></div> : <div className='input'>
                     <img src={person} alt="" />
                     <input type='text' placeholder='Name' />
                 </div>
@@ -28,10 +29,10 @@ const Login = () => {
                     <input type='password' placeholder='Password' />
                 </div>
             </div>
-            {action === 'Sign Up'? <div></div> : <div className='forgot-password'>Lost Passowrd? <span>Click here</span></div>}
+            {action === 'Sign Up' ? <div></div> : <div className='forgot-password'>Lost Password? <span>Click here</span></div>}
             <div className='submit-container'>
-                <div className={action === 'Login'? 'submit gray' : 'submit'} onClick={() => {setAction("Sign Up")}}>Sign Up</div>
-                <div className={action === 'Sign Up'? 'submit gray' : 'submit'} onClick={() => {setAction("Login")}}>Login</div>
+                <div className={action === 'Login' ? 'submit gray' : 'submit'} onClick={() => { setAction("Sign Up") }}>Sign Up</div>
+                <div className={action === 'Sign Up' ? 'submit gray' : 'submit'} onClick={() => { setAction("Login") }}>Login</div>
             </div>
         </div>
     )

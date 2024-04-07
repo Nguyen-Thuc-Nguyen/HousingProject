@@ -84,7 +84,7 @@ export default function Navbar() {
                         <Button sx={{ marginLeft: 4 }} color="inherit"><Link style={{ textDecoration: "none", color: theme.palette.text.primary }} to="/About">About Us</Link></Button>
 
                     </Box>
-                    <Button color="inherit">Login</Button>
+                    <Button color="inherit"><Link style={{ textDecoration: "none", color: theme.palette.text.primary }} to="/login">Login</Link></Button>
                 </Toolbar>
             </AppBar>
         </Box >
