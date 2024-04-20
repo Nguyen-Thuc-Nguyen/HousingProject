@@ -8,6 +8,7 @@ import Navbar from './components/Navbar';
 import Login from './components/Login';
 import { Route, Routes } from 'react-router-dom';
 import AboutUs from './components/AboutUs';
+import Product from './components/Product';
 
 
 function App() {
@@ -18,6 +19,9 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/product" element={<Product />} />
+        <Route path="/product/:categories" element={<Product />} />
+
 
       </Routes>
       <Footer />
