@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import { Box, Button, Grid, Typography } from '@mui/material';
+import { Box, Button, Card, CardMedia, Grid, Typography } from '@mui/material';
 import Carousel from 'react-material-ui-carousel';
 import carousel_1 from '../data/img/carousel1.jpg'
 import carousel_2 from '../data/img/carousel2.jpg'
@@ -144,7 +144,7 @@ export default function HomePage() {
                         variant='h5'
                         sx={{ textAlign: 'center' }}
                     >
-                        Nội thất Ý cho ngôi nhà hiện đại
+                        Italian furniture for modern homes
                     </Typography>
                     <Grid xs={12}
                         sx={{
@@ -157,12 +157,56 @@ export default function HomePage() {
                                 textAlign: 'center',
                             }}
                         >
-                            Cozy được hình thành từ năm 1995 với sứ mệnh mang đến những bộ sưu tập nội thất có thiết kế đương đại, chất lượng vượt trội từ các nước Italy, Đức, Nhật Bản với giá thành hợp lý nhất. Các sản phẩm từ sofa, bàn ăn đến từng lọ hoa trang trí,... tất cả được các Designers đến từ Italy và Australia thiết kế đồng bộ, tạo nên những không gian sống hoàn chỉnh và tinh tế nhất.
+                            Cozy was formed in 1995 with the mission of bringing furniture collections with contemporary design and outstanding quality from Italy, Germany,
+                            and Japan at the most reasonable prices. Products range from sofas, dining tables to decorative flower vases, etc. All are designed synchronously by designers from Italy and Australia, creating the most complete and sophisticated living spaces.
                         </Typography>
                     </Grid>
                 </Grid>
 
 
+            </Grid>
+            <Grid
+                bgcolor={"whitesmoke"}
+                container
+                spacing={5}
+                direction="row"
+                justifyContent="center"
+                alignItems="center"
+                alignContent="center"
+                wrap="wrap"
+                marginTop={"40px"}
+                padding={"20px"}
+                py={"80px"}
+            >
+                <Grid
+                    xs={5}
+                    item>
+                    <Card>
+                        <CardMedia
+                            component="img"
+                            alt="Contemplative Reptile"
+                            height=""
+                            image={"https://cozyliving.com.vn/cdn/shop/files/CARLO_1024x_55773c1b-c9bf-4854-87f5-8ec518b92ce6.jpg?v=1685785332&width=750"}
+                            title="Contemplative Reptile"
+                        />
+                    </Card>
+                </Grid>
+                <Grid
+                    xs={5}
+                    item>
+                    <Typography variant="h4" color="initial">CARLO FORCOLINI</Typography>
+                    <br />
+
+                    <Typography variant="body1" color="initial">
+                        TALENTED DESIGN DIRECTOR</Typography>
+                    <br />
+                    <br />
+
+                    <Typography variant="body2" color="initial">
+                        Carlo Forcolini is a particularly famous designer in the world's interior design industry. He owns many international exhibitions in Madrid, Los Angeles, London, Hamburg, Cologne, Tokyo, Sydney, Santiago del Chile, Oslo. Carlo Forcolini was born in Como, Italy. He graduated from the University of Fine Arts in Milan before succeeding as a co-founder of Alias ​​(1979), Nemo (1993) and OYLight (2005). During his extremely successful career, he created more than a hundred works (furniture, watches, objects, etc.) inspired by literature, cinema and art.
+                        His designs are in the collections of the Cooper Hewitt Museum of Design in New York, the Museum of Decorative Arts in Paris, and in the Collection of the History of Italian Design at the Museum of Fine Arts in Milan.
+                    </Typography>
+                </Grid>
             </Grid>
         </>
     );

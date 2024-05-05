@@ -1,16 +1,11 @@
 import React, { useState } from 'react'
 import '../css/Login.css'
-import { Box, Button, Grid, TextField } from '@mui/material'
+import { Box, Button, Grid, TextField, Typography } from '@mui/material'
 import { useDispatch, useSelector } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
-import { loadUserData, loginSuccess, loginFailure } from '../redux/Redux'
-import { UserData } from '../data/database/user'
+import { Link, useNavigate } from 'react-router-dom'
+import { loginSuccess, loginFailure } from '../redux/Redux'
 
 export default function Login() {
-
-
-
-    // const [action, setAction] = useState("Sign Up");
 
     const [error, setError] = useState('')
 
@@ -18,26 +13,13 @@ export default function Login() {
 
     const navigate = useNavigate()
 
-    dispatch(loadUserData(UserData))
-
-
     const [login, setLogin] = useState(
         {
             "email": "",
             "password": ""
         }
     )
-    // const [signUp, setSignUp] = useState([
-    //     {
-    //         "email": "",
-    //         "fullName": "",
-    //         "avatar": "",
-    //         "password": "",
-    //         "dateOfBirth": "",
-    //         "role": "",
-    //         "id": ""
-    //     }
-    // ])
+
 
     const users = useSelector((state) => state.auth.user)
 
@@ -47,7 +29,7 @@ export default function Login() {
         console.log(user)
         if (user) {
             setError('')
-            dispatch(loginSuccess())
+            dispatch(loginSuccess(user))
             navigate('/')
         } else {
             setError('Invalid Username or Password !!')
@@ -56,18 +38,6 @@ export default function Login() {
         }
     }
 
-    // const handleLogin = () => {
-    //     const user = users.find(user => user.email === login.email && user.password === login.password);
-    //     if (user) {
-    //         dispatch(loginSuccess())
-    //         navigate('/')
-    //         setError('')
-    //     } else {
-    //         dispatch(loginFailure())
-    //         navigate('/login')
-    //         setError('Invalid Username or Password !!')
-    //     }
-    // }
 
 
     return (
@@ -105,11 +75,17 @@ export default function Login() {
                         onChange={(e) => setLogin({ ...login, password: e.target.value })}
                     />
                 </Grid>
+                <Grid xs={12}>
+                    <Typography sx={{ display: 'flex', width: '100%', justifyContent: 'flex-end' }} variant="body2" color="initial">
+                        <Link to="/register" style={{ textDecoration: 'none', color: 'black' }}> Don't have an acccount ?</Link>
+                    </Typography>
+                </Grid>
                 <Grid xs={12} display={'flex'} justifyContent={'center'}>
                     <Button onClick={handleLogin} variant='contained' sx={{ width: '200px' }} type='submit'>
                         Login
                     </Button>
                 </Grid>
+
                 {error && ( // Display the error message if there is one
                     <Grid xs={12}>
                         <p style={{ marginLeft: 1, color: 'red' }}>{error}</p>
