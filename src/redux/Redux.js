@@ -4,7 +4,9 @@ import { Products } from "../data/database/product";
 import { sale } from "../data/database/sale"
 
 const authSlice = createSlice({
+
     name: 'auth',
+
     initialState: {
         isAuthenticated: false,
         currentAccount: {},
@@ -13,6 +15,7 @@ const authSlice = createSlice({
         product: Products,
         shoppingCart: [],
     },
+    
     reducers: {
         logout: state => {
             state.isAuthenticated = false;

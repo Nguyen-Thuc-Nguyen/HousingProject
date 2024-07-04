@@ -17,7 +17,6 @@ export default function Buying() {
   const param = useParams()
   const dispatch = useDispatch()
 
-  // const createOrder = useSelector((state) => state.auth.order)
   const carts = useSelector((state) => state.auth.shoppingCart)
   const userlog = useSelector((state) => state.auth.currentAccount)
   const myCarts = carts.filter((item) => item.userId === userlog.id && item.status === "open");
